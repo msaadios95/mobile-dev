@@ -1,0 +1,102 @@
+Class 1 — 07-29-2026
+
+Discord:
+
+Email: saadmios95@gmail.com
+Discord Password: !2026TConsul
+
+
+
+Swift Data is the latest data, for make offline app
+
+
+// var and let
+
+var :: Create mutabel variables ( we can change the mutable variable values later in the program)
+
+let :: Create immutable variables and constants
+
+
+
+Explicit Type Declaration :: 
+
+
+After the variable we can explicitly mention the type  var myFavFruit: String = "Apple
+
+Implicit Type Declaration ::
+
+var myFavFruit = "Apple
+
+
+
+TypeSafety::
+
+Swift is a type safe language  Type Safety: Once compiler know that a variable is for eg String then later on you cannot assign the value integer, this happens especially in implicit type declaration, this is why its called Type Safety
+
+
+
+optionals::
+
+We can assign null
+
+var number: Int? = 10
+
+number = nil
+
+
+OptionalBinding or WrappingOptional Varaibles
+
+
+3 ways to do optional binding
+
+
+1- nil coalescing operator (??)
+
+	When the value is nil and need to use some default value
+
+	var number: Int?
+	number = 12345
+	print(number ?? "")
+
+2- if let binding
+
+     If we have the value then execute the block otherwise leave the block
+
+var number: Int?
+
+number = 12345
+if let _number = number{
+    print(_number)
+}else{
+	print(“no account number”)
+}		
+
+3- guard let binding
+
+guard let _number = number else{
+    print("no account number")
+}
+
+
+Enum::
+
+Used to write type safe code
+
+For example, If we are using the rest api, either it will be success of failure, so we know the scope
+
+enum Direction{
+    
+    case east
+    case west
+    case north
+    case south
+    
+}
+
+var direction : Direction = .east
+
+
+
+Either you will have associated vale or raw value
+
+
