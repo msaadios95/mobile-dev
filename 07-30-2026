@@ -1,0 +1,110 @@
+Swift Fundamentals
+
+1- Control Flow
+
+	- IF Statement
+
+		No need to use parenthesis	
+
+	- IF- Else statement
+
+	- Else - If Ladder
+
+	- Switch Statement
+
+
+
+The difference between IF-Else ladder and Switch statement is in else-if ladder it goes to every else-if condition but on the other hand in the switch statement is directly jumps to the specific case
+
+
+Range:
+
+Let marks - 85
+
+Switch marks {
+
+	case 90…100:
+	print(Good)
+
+	case 100…130:
+	print(“Very Good”)
+}
+
+
+Loops:
+
+1- for-in Loop
+
+	for number in 1…5 {
+	print(number)
+	}
+
+
+Collections
+
+1- Arrays:
+
+	Three types of collection 
+
+	- Arrays: Collection of order type
+	- Dictionary is a key value pair
+	- Set : It will not allowed a similar values, Unique values
+			It will remove all the duplicate, but it will not maintain an order 
+
+
+Function
+
+	func add(){
+	
+	print(“additional”)
+}
+
+
+Variadic Parameter:  When you don’t know the limit of the number of parameters, n numbers of parameters 
+
+
+
+Inout keyword
+
+	Points to the same memory address, and make the changes
+
+
+	func square (
+
+
+Class: 
+
+	Skeleton, A blue print
+
+
+	class Employee {
+	
+	var age = 0
+	var name = ""
+	var address = ""
+
+	}
+
+
+	let employee = Employee()
+	
+	employee.age = 24
+	employee.name = Saad
+	employee.address = Georgia
+}
+
+
+Classs are referenced type
+
+ Struct: They are  value type
+
+Struct doesn’t support inheritance
+
+
+ Classes are stored in heap memory, 
+Struct are stored in stack memory, and they are faster as compare to classes
+
+
+Mutating keyword need to be use dit we want to change variable value inside struct , because they immutable, so in order to make change we need to add “mutating” keyword
+
+
