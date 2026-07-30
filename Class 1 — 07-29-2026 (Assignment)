@@ -1,0 +1,200 @@
+Class 1 — 07-29-2026 (Assignment)
+
+
+    Interview questions
+
+
+ 1. waht is diff b/w var and let
+
+    var ->  can be defined as mutable variables, who's values can be change any time
+    let ->  can be defined as immutable variables, where the values remains constant, cannot be changed
+
+ 2. why swift is type safe language, expalin
+
+    In variable declaration, once we assign the value for example String, then later on you cannot pass the 
+    Integer value  to this variable, that why swift is type safe. 
+
+ 3. what are optionals
+
+    We can assign nil to the variable, for eg.
+    
+    var number :Int? = 10 
+    number = nil
+    
+ 4. what is optional binding
+
+    based on the value of variable we handle the situation, like if we have to execute the certain piece of code we check if the value exist or not, or if not, how we're gonna handle the else part in case if the value doesn't exist
+     
+    In case of REST API, we have two situations, either it's gonna be success or failed (Guard let Binding) on in the same case first we check if the url value exist or not, if exist then only it will call the API, otherwise it will skip the piece of code (if let binding)
+
+
+  5. different ways to do optioanl binding
+
+    - nil Coalscing operator (??)
+    - if let binding
+    - guard let binding
+
+ 6. diff b/w if let and guard let and nil coalsing
+
+    There're 3 ways to do Optional binding
+
+    1- nil Coalscing operator (??)
+
+    Example:
+
+              var number: Int?
+              number = 12345
+              print(number ?? "")
+
+    2- if let binding
+
+       If the value exist then only will execute the block of code, otherwise it will skip the code, else block is                 not required
+    
+    Example: 
+
+            var number: Int?
+            number  = 123
+
+            if let: _number = number{
+                print(_number)
+            }
+
+    3- guard let binding
+
+       if the value doesn't exist, then we have to handle the else part of the same block.
+
+    Example:
+
+            var number: Int?
+            
+            guard let : _number = number{
+            print(_number)
+            }else{
+            number = 5678
+            return
+            }
+
+ 7. waht is explict vs implict varibale declration
+
+
+    Explicit: After variable name we explicitly mention the variable type, 
+            
+    Example: 
+
+        var myFavFruit: Sting? = "Apple"
+
+    Implicit: No variable type mentioned at the time of declaration 
+
+    Example: 
+
+        var myFavFruit = "Banana"
+
+ 8. what are optioanls behind the scene
+
+    It checks the value of the variable exist or not, if the value exists, then it will print the value along with   the optional(value)
+
+//Research
+
+ 9. what is enum
+
+    Used to write the type safe code, Group of similar types, where we know the scope of the variable
+
+    Eample: 
+
+    enum RestApi{
+
+    case success
+    case failure
+    
+    }
+
+    var success: RestApi = .success
+    var failure: RestApi = .failure
+
+ 10  diff b/w assoicated values and raw values
+
+    Enum are of two types, Associated value or rawValue
+
+    Associated:
+
+    enum RestApi{
+
+    case success(Boolean)
+    case failure(Boolean)
+    
+    }
+
+    var success: RestApi = .success(true)
+    var failure: RestApi = .failure(false)
+
+    RawValue:
+
+    enum RestApi{
+    
+    case success = "Success"
+    case failure = "Failure"
+    
+    }
+
+    var _apiSuccess : RestApi = .success
+    var _apiFailure : RestApi = .failure
+
+
+    print(_apiSuccess.rawValue)
+    print(_apiFailure.rawValue)
+
+
+ 
+  Hands on Questions
+
+ 1. Create an enum that represents the days of the week.
+
+
+    enum WeekDays{
+    
+    case Monday
+    case Tuesday 
+    case Wednesday
+    case Thursday
+    case Friday
+    case Saturday
+    case Sunday
+
+    }
+
+
+ 2. Desing Calander event enum
+
+    enum Calender{
+    
+    case eventName(String)
+    case day(String)
+    case date(Date)
+    case startTime(Time)
+    case endTime(Time)
+    }
+
+    var eventName: Calender = .eventName("Mobile Developer Training")
+    var eventDay : Calender = .day("Wednesday")
+    var eventDate : Calender = .date("07-29-2026")
+    var startTime : Calender = .startTime("08:00 AM")
+    var endTime : Calender = .endTime("12:00 PM")
+
+ 3. fix issue in below code
+
+    /*
+    let price: Double = 499
+    let tax = 49.5
+    let total = price + tax
+    print(total)
+    */
+
+ 4.  Choose the Correct Data Type
+
+    username: String
+    age: Int
+    salary: Int
+    isLoggedIn : Boolean   
+    rating: Double
+
+
