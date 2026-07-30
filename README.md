@@ -3,5 +3,6 @@
 
 07-30-2026 -- Project
 
-Student Management System\n
+Student Management System
+
 Interview Questions
