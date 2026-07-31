@@ -108,3 +108,25 @@ Struct are stored in stack memory, and they are faster as compare to classes
 Mutating keyword need to be use dit we want to change variable value inside struct , because they immutable, so in order to make change we need to add “mutating” keyword
 
 
+1. diff b/w struct and classes
+
+	Struct are of value type, and class if reference type
+
+// 2. diff b/w array, set and dict
+
+	Dictionary uses a key and value pair, and array is order 
+
+// 3. what is inout keyword does
+
+	We use inout to swap values without using the temporary values
+	
+// 4. what is varadic params
+
+	It is use when we don't know the limit 
+		
+// 5. what is use of mutating keyword 
+
+	Mutating keyword is used to change the values inside the struct
+
+		
+
