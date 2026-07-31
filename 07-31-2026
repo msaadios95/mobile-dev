@@ -1,0 +1,138 @@
+
+Swift Immediate Training
+
+### Closure:
+
+Use when we so async jobs, like sending the api request and wait for the response and at the same time execute the other jobs also
+
+like do some heavy jobs
+
+let hello:()-> Void = {
+    print("hello")
+}
+
+hello()
+
+
+func doHeavyJob(callback:(String) -> Void){
+    
+    callback("Completed")
+}
+
+doHeavyJob {value in
+    print(value)
+}
+
+
+### Protocol 
+
+Protocol method must not have bodies, it's same like Interface in Java, like we only have a blueprint of variables and functions
+
+protocol LoginProtocol {
+    func login(username: String, password: String)
+}
+
+class Login: LoginProtocol{
+    
+    func name(username: String, password: String){
+                
+    }
+    
+}
+
+We can achieve Abstraction and Dependency Inversion and protocol oriented programming
+
+protocol CarContract {
+    func start()
+}
+
+protocol CarServiceContract {
+    func carService()
+}
+
+class Car: CarContract , CarServiceContract{
+    
+    func carService(){
+        
+    }
+    
+    func start(){
+        injectFuel()
+        startEnging()
+        checkSensor()
+    }
+    
+    func injectFuel(){
+        print("Inject Fuel")
+    }
+    
+    func startEnging(){
+        print("Start Engine")
+    }
+    
+    func checkSensor(){
+        print("Check Sensor")
+    }
+    
+}
+
+
+let car : CarContract = Car()
+
+car.start()
+
+Now the above whole code can be converted to Protocol, becuase the above functionality is exposing the functions
+
+
+### Dependecy Injection: 
+
+  Design pattern where you have object pass to another object, then how you can pass outside of the class that is dependency Injection, then only thing you code is gonna be loosly coupled
+
+
+3 ways to do:
+
+1- initializer Dependency
+2- function parameter
+3- Instance variables
+
+### Dependecy Inversion
+
+
+
+### Extension
+
+You are just giving the default behavior to you protocol method, or to remove the duplicate code
+
+
+protocol Player() {
+
+func play()
+
+}
+
+extension Player {
+func play(){
+print("play")
+}
+}
+
+
+class Sony: Player {
+
+}
+
+class SonyMax: Player {
+
+}
+
+let s1 = Sony()
+s1.play()
+
+let s2 = SonyMax()
+s2.play()
+
+
+## Swift is s protocol orientied programming, and does not support multiple inheritance, to achieve multilple inheritance we use protocol 
+
+
+## Protocol oriented programming
