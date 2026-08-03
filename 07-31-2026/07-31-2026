@@ -26,6 +26,8 @@ doHeavyJob {value in
 
 ### Protocol 
 
+Protocol is set of rules and instructions 
+
 Protocol method must not have bodies, it's same like Interface in Java, like we only have a blueprint of variables and functions
 
 protocol LoginProtocol {
