@@ -1,0 +1,8 @@
+Taiba Farms/
+**/node_modules/
+**/.next/
+DerivedData/
+*.xcuserstate
+.build/
+.swiftpm/
+.DS_Store
