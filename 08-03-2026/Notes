@@ -1,0 +1,46 @@
+
+### Computed/Calculated Properties
+
+var radius = 10 
+
+var diameter: Int {    // Computer Properties
+2 * radius
+}
+print(diameter)
+
+radius = 20 
+
+print(diameter)
+
+ Text: this is to display any static text
+ ImageView: to show any image
+ TextField: take the text input from user
+ Button:  user interactive element
+ List: display the list of items
+ Grid: to display the grid UI
+ ScrollView: For horizontal and Vertical scroll
+ Stepper
+ Slider
+
+
+### Arrange UI
+
+ VSStack: Vertical arrange element
+ HStack: Horizontal arrange element
+ ZStack:  stack items on top of eachother
+ NavigationStack: To navigate from one view to another view
+
+
+### @PropertyWrapper
+
+1. state
+2. binding
+3. stateObject
+4. ObservedObject
+5. EnvironmentObject
+6. Environment 
+
+
+
+
+
