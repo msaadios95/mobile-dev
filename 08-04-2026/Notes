@@ -1,0 +1,110 @@
+
+# Access Control
+
+  1. private 
+
+      Only accessible inside the class and inside the extension, but if the extension is on another file and a private variable is on another file then you won't be able to access.
+  
+
+      private(set) var balance = 20  (Now you can only get or read from outside)
+
+  2. fileprivate
+
+      Within the file you can access it in the class or in the extension, but outside the file you won't be able to access.
+
+  3. interval
+
+      If you don't put anytpe, be default is internal, and can be access anywhere in the targets
+    
+  4. public
+
+      You can access it in any tagets, if you want to expose it outside of frameworks you can mark it as public, you won't be allowed to extend or inherit
+  
+  5. open
+
+      You can access it in any tagets, if you want to expose it outside of frameworks you can mark it  open, it alow you to extend and inherit
+
+  6. package
+
+
+  class Account{
+    var balance: Double = 20
+  }
+
+  extension Account{
+    
+  }
+  
+  let account: Account()
+print(account.balance)
+
+
+# Higher Order Functions
+
+
+Take another function or parameter or parameter and return a function or closure
+
+
+1- map
+
+  let number = [1,2,3,4,5]
+
+  let result = number.map {number in 
+  return number * 2 
+  }
+
+2. compactmap
+
+    It is same as map, but if it have the nil and optional, it will remove all of them 
+
+    let number = ["1","2","3","4","5","abc"]
+    let result = number.compactMap { Int($0) }
+    print(result)
+
+3. reduce
+
+    Main use is if you have a collectiona and you want to reduce it to single element, then you apply reduce mostly addition or multiplication, or fibbnoci series
+  
+4. flatMap
+
+    If you have two dimensional array, it will convert it to one dimensional array
+
+      let twoDimArray = [[1,2], [3,4], [5,6], [7,8]]
+      print(twoDimArray.flatMap($0))
+  
+5. filter
+
+    To apply filter operations  like you have an array and you want to filter out the even numbers, it will filter
+
+
+  let number = [1,2,3,4,5,6,7,8,9]
+
+  let evenNumber = number.filter { $0 % 2 == 0 }
+  print(evenNumber)
+
+6. sort
+
+  sorted() ->  it will return you a new array of sorting elements, original array will remain same.
+
+  sort() ->    It will not return you anything, it will modified or sort the original array , not give you any new array
+
+7. foreach
+
+  Similar like For loop , insted of putting for loop, we use forEach closure
+
+  number.forEach {
+    print($0)
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
