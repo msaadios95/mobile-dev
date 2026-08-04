@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LoginUIView: View {
     
-    let validCredentials = Credentials(username: "saad", password: "1234")
+    let validCredentials = Credentials(username: "msaadios95", password: "1234")
     
     @State private var enteredUsername: String = ""
     @State private var enteredPassword: String = ""
