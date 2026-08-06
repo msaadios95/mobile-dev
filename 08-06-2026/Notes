@@ -1,11 +1,51 @@
 
 ### Error Handling
 
+enum MyError: Error {
+    case divideByZero
+}
+    
+func divide(num: Double, num2: Double)throws -> Double {
+    
+    if num2 == 0 {
+        throw MyError.divideByZero
+    }
+    
+    return num / num2
+}
 
+// 1st Variation
+
+let result = try? divide(num: 100, num2: 0)
+
+// 2nd varation
+
+do{
+    try print (divide(num: 100 , num2: 0))
+}catch{
+    print(error.localizedDescription)
+}
+
+
+// 3rd Varation
+
+
+// implicit unwrapped variable // force unwrapping
+
+var name: String!  = "Joy"
+
+
+print(name!)
 
 
 ### Generics
 
 
+func add<T> (value1: T, value2: T) -> T {
+    return value1 + value 2
+}
 
-### Navigation in Swift UO
+
+
+
+### Navigation in Swift UI
