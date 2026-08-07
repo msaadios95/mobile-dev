@@ -8,15 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        
+        VStack{
+            
+            GreetingHeader()
+            
+            ScrollView{
+                BalanceCard()
+                QuickActions()
+                Accounts()
+                RecentTransactionsSection()
+                Spacer()
+            }
+            
+        } .background(Color(.systemGray6))
     }
+    
 }
 
 #Preview {
